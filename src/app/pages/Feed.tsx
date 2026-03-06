@@ -59,7 +59,7 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
 export default function Feed() {
   const feedCategories = [
     {
-      icon: "🐑",
+      // icon: "🐑",
       title: "Sheep & Lamb Feed — For Tender, Flavour-Rich Meat",
       description: "Our sheep and lamb are raised on a diverse mix of organic grasses, legumes, green fodder, and native plants — producing naturally tender, aromatic meat with higher nutrient density and improved gut health.",
       benefits: [
@@ -73,7 +73,7 @@ export default function Feed() {
       link: "/farms/sheep"
     },
     {
-      icon: "🐓",
+      // icon: "🐓",
       title: "Country Chicken (Natu Kodi) Feed — Authentic Desi Taste",
       description: "Our free-range Natu Kodi feed includes organic grains, high-chlorophyll green fodder, farm-grown legumes, and naturally foraged insects & herbs — resulting in firm, healthy muscle with authentic desi flavour.",
       benefits: [
@@ -87,7 +87,7 @@ export default function Feed() {
       link: "/farms/hen"
     },
     {
-      icon: "🐟",
+      // icon: "🐟",
       title: "Murrel Fish Feed — Clean, Firm, Fresh Meat",
       description: "Murrel thrive when feed and pond inputs are clean and natural. Our organic feed ensures firm, white flesh with clean taste and better spice absorption for Indian recipes — with zero hormones, antibiotics, or synthetic growth boosters.",
       benefits: [
@@ -411,7 +411,7 @@ export default function Feed() {
           <FadeIn>
             <div className="text-center mb-16">
               <span className="text-[#C5A059] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">The Difference</span>
-              <h2 className="text-3xl md:text-5xl font-serif mb-6 leading-tight">
+              <h2 className="text-3xl text-white md:text-5xl font-serif mb-6 leading-tight">
                 Why Indian Customers <span className="italic text-[#C5A059]">Prefer</span><br />
                 Livestock Grown on Our Feed
               </h2>

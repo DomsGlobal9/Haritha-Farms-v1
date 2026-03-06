@@ -8,17 +8,18 @@ import countryChickenImage from '../../assets/images/hen2.jpg';
 import sheepImage from '../../assets/images/goat2.jpg';
 import soilImage from '../../assets/images/heroBirdImage.jpg';
 import farmLandscapeImage from '../../assets/images/heroBirdImage.jpg';
-import fodderImage from '../../assets/images/heroBirdImage.jpg';
-
+import fodderImage from '../../assets/images/farm-soil-img.jpg';
+import VisitUs from '../../assets/images/haritha-visit-us.png';
+import henNewZoom from '../../assets/images/zoom-up-hen.jpg';
 // --- Assets ---
 const IMAGES = {
   hero: "https://images.unsplash.com/photo-1714588166786-c3791ea796c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcmdhbmljJTIwZmFybSUyMGNpbmVtYXRpYyUyMGFlcmlhbCUyMGZvcmVzdCUyMGdyZWVufGVufDF8fHx8MTc2ODIxNDAyMHww&ixlib=rb-4.1.0&q=80&w=1080",
-  soil: soilImage,
+  soil: henNewZoom,
   fish: murrelFishImage,
   chicken: countryChickenImage,
   sheep: sheepImage,
   fodder: fodderImage,
-  farmer: farmLandscapeImage,
+  farmer: VisitUs,
 };
 
 // --- Components ---

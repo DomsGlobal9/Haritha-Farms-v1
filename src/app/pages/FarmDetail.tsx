@@ -8,8 +8,8 @@ import { CTASection } from '../components/ui/CTASection';
 import Sheep from '../../imports/Sheep';
 
 import sheepFarmingMain from '../../assets/images/sheepFarming.jpg';
-import naturalRange from '../../assets/images/natural-range.jpg';
-import cleanBalanced from '../../assets/images/clean-balanced.jpg';
+import naturalRange from '../../assets/images/goat1.jpg';
+import cleanBalanced from '../../assets/images/goat2.jpg';
 import pureWater from '../../assets/images/pure-water.jpg';
 import preventHealth from '../../assets/images/prevent-health.jpg';
 import stressfree from '../../assets/images/stressFree.jpg';
@@ -25,6 +25,13 @@ import WhyHarithaChicken from '../../assets/images/why-haritha.jpg';
 import VisualDiary from '../../assets/images/visiual-diary.jpg';
 
 
+import sheepFarming1 from '../../assets/images/sheepfarming-1.jpg';
+
+import sheepFarming2 from '../../assets/images/sheepfarming2.jpg';
+import sheepFarming3 from '../../assets/images/sheepfarming3.jpg';
+import sheepFarming4 from '../../assets/images/sheepfarming4.jpg';
+
+
 import FishFarmingMain from '../../assets/images/Fish-Farming-Main.jpg';
 import NaturalPond from '../../assets/images/natural-pond.jpg';
 import ChemicalAntiBioticFree from '../../assets/images/chemical-antibiotic-free.jpg';
@@ -33,6 +40,8 @@ import StressFreeEnv from '../../assets/images/stress-free-env.jpg';
 import SlowHealthGrowth from '../../assets/images/slow-health-growth.jpg';
 import WhyHaritha2 from '../../assets/images/why-hrtha.jpg';
 
+
+import groupHens from '../../assets/images/group-hens.jpg';
 
 
 
@@ -1368,28 +1377,26 @@ export default function FarmDetail() {
                </Link>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:h-[600px]">
-               {/* Large Item */}
-               <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden">
-                  <img src={type === 'hen' ? diaryChickenFlock : data.heroImage} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" alt="Farm Detail" />
-                  <div className="absolute bottom-0 left-0 p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-black/80 to-transparent w-full">
-                     <p className="text-[#C5A059] text-xs font-bold uppercase tracking-widest mb-1">Daily Life</p>
-                     <p className="text-white font-serif text-xl">Morning Inspections</p>
-                  </div>
-               </div>
-               
-               {/* Small Items */}
-               {(type === 'hen' ? [diaryChickenGrass, diaryChickenNest] : [null, null]).map((src, i) => (
-                  <div key={i} className="relative group overflow-hidden md:col-span-1 md:row-span-1">
-                     <img src={src || `https://source.unsplash.com/random/600x600?${type},farm,${i}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" alt="Detail" />
-                  </div>
-               ))}
-               
-               {/* Wide Item */}
-               <div className="md:col-span-2 relative group overflow-hidden">
-                  <img src={type === 'hen' ? whyHarithaChickenImage : `https://source.unsplash.com/random/800x400?${type},nature`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" alt="Detail" />
-               </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:h-[600px]">
+
+  {/* Large Item */}
+  <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden">
+    <img src={sheepFarming1} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
+  </div>
+
+  {/* Small Items */}
+  {[sheepFarming3, groupHens].map((src, i) => (
+    <div key={i} className="relative group overflow-hidden">
+      <img src={src} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
+    </div>
+  ))}
+
+  {/* Wide Item */}
+  <div className="md:col-span-2 relative group overflow-hidden">
+    <img src={FishFarmingMain} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
+  </div>
+
+</div>
             
             <div className="mt-12 text-center md:hidden">
                <Link to="/gallery" className="inline-flex items-center text-xs font-bold tracking-[0.2em] uppercase text-[#C5A059]">

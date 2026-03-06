@@ -171,7 +171,7 @@ export function Header() {
         </div>
 
         {/* Logo - Centered */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center -ml-40">
           <Link to="/" className="z-50 relative block group">
             <img 
               src={Logo} 

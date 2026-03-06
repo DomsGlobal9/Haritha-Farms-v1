@@ -15,7 +15,7 @@ import {
 } from '../../assets';
 
 import WhyHarithaChicken from '../../assets/images/why-haritha.jpg';
-import herobird from '../../assets/images/heroBirdImage.jpg';
+import herobird from '../../assets/images/farm-soil-img.jpg';
 
 
 

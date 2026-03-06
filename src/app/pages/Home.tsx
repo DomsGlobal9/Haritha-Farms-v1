@@ -10,7 +10,7 @@ import { cn } from '../../lib/utils';
 import newHeroImage from '../../assets/images/heroBirdImage.jpg';
 import fishImage from '../../assets/images/fishimage.jpg';
 import henImage from '../../assets/images/henimage.jpg';
-import sheepImage from '../../assets/images/goatimage.png';
+import sheepImage from '../../assets/images/sheep-hen.jpg';
 // Reuse available images as placeholders for missing assets
 const philosophyImage = newHeroImage;
 const imgImageHandsHoldingSoil = newHeroImage;
@@ -32,7 +32,7 @@ export default function Home() {
     <div className="bg-background relative">
 
       {/* --- HERO SECTION --- */}
-      <section className="relative min-h-[130vh] md:h-[95vh] w-full overflow-hidden flex items-end pb-12 md:pb-24 px-6 pt-32 md:pt-40">
+      <section className="relative min-h-[123vh] md:h-[95vh] w-full overflow-hidden flex items-end pb-12 md:pb-24 px-6 pt-32 md:pt-40">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/30 z-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A1610] via-[#0F1C15]/60 to-transparent z-10" />
@@ -59,9 +59,9 @@ export default function Home() {
             </h1>
           </FadeIn>
 
-          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 md:gap-12 w-full border-t pt-8 md:pt-10 mt-4" style={{ borderColor: 'rgba(255, 255, 255, 0.2)' }}>
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 md:gap-12 w-full border-t pt-0 md:pt-10 mt-0" style={{ borderColor: 'rgba(255, 255, 255, 0.2)' }}>
             <FadeIn delay={0.4} direction="up">
-              <p className="text-base md:text-xl font-light tracking-wide text-white/80 max-w-xl leading-relaxed">
+              <p className="text-base md:text-xl font-light tracking-wide text-white/80 mt-0 max-w-xl leading-relaxed">
                 We raise sheep &amp; lamb, country chicken (Natu Kodi), and murrel fish the right way—organic, pesticide‑free fodder, hormone‑free rearing, and natural, stress‑free environments for healthier livestock and honest flavour.
               </p>
               <p className="text-sm md:text-base text-[#C9A84C]/80 mt-4 tracking-wide font-light">
@@ -255,7 +255,7 @@ export default function Home() {
             {/* Editorial Image */}
             <div className="w-full lg:w-5/12 relative group">
               <FadeIn delay={0.2}>
-                <div className="relative aspect-[3/4] overflow-hidden bg-[#E6E2D6]">
+                <div className="relative aspect-[20/35] overflow-hidden bg-[#E6E2D6]">
                   <motion.img
                     initial={{ scale: 1.2 }}
                     whileInView={{ scale: 1 }}
