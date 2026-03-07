@@ -98,7 +98,7 @@ export function Header() {
       <div className="relative container mx-auto px-6 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
         
         {/* Desktop Navigation - Left */}
-        <nav className="hidden lg:flex items-center justify-start gap-8">
+        <nav className="hidden lg:flex items-center justify-start gap-8 pl-13">
           {navLinks.slice(1, 4).map((link) => (
             <div key={link.name} className="relative group">
               <Link 

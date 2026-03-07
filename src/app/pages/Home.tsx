@@ -86,7 +86,7 @@ export default function Home() {
       {/* --- TRUST STRIP (4 badges) --- */}
       <section className="bg-[#0A1610] border-t border-white/5">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/5">
+          <div className="grid grid-cols-2 md:grid-cols-4  divide-white/5">
             {[
               { icon: Ban, label: "Hormone‑Free Rearing" },
               { icon: Wheat, label: "Organic, Pesticide‑Free Fodder" },
