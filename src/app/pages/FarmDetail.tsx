@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, Sprout, Wheat, Droplets, Stethoscope, Heart, Awa
 import { CTASection } from '../components/ui/CTASection';
 import Sheep from '../../imports/Sheep';
 
+
 import sheepFarmingMain from '../../assets/images/sheepFarming.jpg';
 import naturalRange from '../../assets/images/goat1.jpg';
 import cleanBalanced from '../../assets/images/goat2.jpg';
@@ -31,7 +32,7 @@ import sheepFarming2 from '../../assets/images/sheepfarming2.jpg';
 import sheepFarming3 from '../../assets/images/sheepfarming3.jpg';
 import sheepFarming4 from '../../assets/images/sheepfarming4.jpg';
 
-
+import newFish from '../../assets/images/new-fish.jpg';
 import FishFarmingMain from '../../assets/images/Fish-Farming-Main.jpg';
 import FishFarmingPesticides from '../../assets/images/pestisides.jpg';
 import NaturalPond from '../../assets/images/natural-pond.jpg';
@@ -792,7 +793,7 @@ const farmData: any = {
         {
           title: "Why Haritha Murrel Fish?",
           icon: Award,
-          image: WhyHaritha2,
+          image: newFish,
           content: (
             <div className="space-y-4">
               <p className="font-serif text-lg text-[#0A1610]">Healthier, Safer & Tastier.</p>
