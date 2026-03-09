@@ -668,7 +668,7 @@ const farmData: any = {
         {
           title: "Natural Pond Ecosystem",
           icon: Droplets,
-          image: NaturalPond,
+          image: newFish,
           content: (
             <div className="space-y-4">
               <p>We raise Murrel fish in freshwater earthen ponds that closely mimic their natural habitat.</p>
