@@ -19,7 +19,7 @@ export default function Contact() {
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormData>();
   const onSubmit = async (data: FormData) => {
   try {
-    const response = await fetch("http://localhost:5000/submit", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/submit` {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
