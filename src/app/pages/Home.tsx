@@ -10,7 +10,8 @@ import { cn } from '../../lib/utils';
 import newHeroImage from '../../assets/images/heroBirdImage.jpg';
 import fishImage from '../../assets/images/fishimage.jpg';
 import henImage from '../../assets/images/henimage.jpg';
-import sheepImage from '../../assets/images/sheep-hen.jpg';
+
+import sheepImage from '../../assets/images/sheep-original-img.jpg';
 // Reuse available images as placeholders for missing assets
 const philosophyImage = newHeroImage;
 const imgImageHandsHoldingSoil = newHeroImage;
