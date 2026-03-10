@@ -41,6 +41,7 @@ import NaturalProtienRichFeed from '../../assets/images/natural-protien-rich-fee
 import StressFreeEnv from '../../assets/images/stress-free-env.jpg';
 import SlowHealthGrowth from '../../assets/images/slow-health-growth.jpg';
 import WhyHaritha2 from '../../assets/images/why-hrtha.jpg';
+import NewNaturalEcoSystem from '../../assets/images/new-natural-pond-ecosystem.jpg';
 
 
 import groupHens from '../../assets/images/group-hens.jpg';
@@ -668,7 +669,7 @@ const farmData: any = {
         {
           title: "Natural Pond Ecosystem",
           icon: Droplets,
-          image: newFish,
+          image: NewNaturalEcoSystem,
           content: (
             <div className="space-y-4">
               <p>We raise Murrel fish in freshwater earthen ponds that closely mimic their natural habitat.</p>
