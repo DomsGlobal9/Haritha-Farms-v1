@@ -7,11 +7,14 @@ import { Button } from '../components/ui/button';
 import { FadeIn } from '../components/ui/fade-in';
 import { cn } from '../../lib/utils';
 // Direct imports for images from assets/images
-import newHeroImage from '../../assets/images/heroBirdImage.jpg';
+import newHeroImage from '../../assets/images/header-bg-haritha.png';
 import fishImage from '../../assets/images/fishimage.jpg';
 import henImage from '../../assets/images/henimage.jpg';
 
 import sheepImage from '../../assets/images/sheep-original-img.jpg';
+
+import NewSheepSheep from '../../assets/images/new-sheep-sheep.jpg';
+
 // Reuse available images as placeholders for missing assets
 const philosophyImage = newHeroImage;
 const imgImageHandsHoldingSoil = newHeroImage;
@@ -106,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* --- WHAT WE RAISE (Product / Livestock Section) --- */}
-      <section className="bg-[#1C1C1C] text-[#F2F0E9] overflow-hidden flex flex-col min-h-screen md:h-screen md:max-h-[1080px]">
+      <section className="bg-[#0A1610] text-[#F2F0E9] overflow-hidden flex flex-col min-h-screen md:h-screen md:max-h-[1080px]">
         {/* Section Header */}
         <div className="container mx-auto px-[24px] py-8 md:py-12 shrink-0">
           <FadeIn>
@@ -146,7 +149,7 @@ export default function Home() {
               title: "Sheep & Lamb",
               subtitle: "Pasture‑Raised",
               desc: "Pasture‑raised on our organic fodder with open movement and gentle handling. Natural growth, better resilience, and clean, layered characteristics families love.",
-              img: sheepImage,
+              img: NewSheepSheep,
               icon: Wind,
               link: "/farms/sheep",
               cta: "Learn about Sheep & Lamb"
@@ -348,7 +351,7 @@ export default function Home() {
                 title="Sheep & Lamb"
                 subtitle="Pasture‑Raised on Organic Fodder"
                 desc="Pasture‑raised on our organic fodder with open movement and gentle handling. Natural growth, better resilience, and clean, layered characteristics families love."
-                img={sheepImage}
+                img={NewSheepSheep}
                 link="/farms/sheep"
               />
               <FarmCard
