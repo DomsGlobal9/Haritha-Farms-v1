@@ -14,7 +14,7 @@ type FormData = {
   message: string;
 };
 
-
+// contact
 export default function Contact() {
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormData>();
   const onSubmit = async (data: FormData) => {
