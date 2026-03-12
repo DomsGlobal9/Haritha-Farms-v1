@@ -45,6 +45,16 @@ import NewNaturalEcoSystem from '../../assets/images/new-natural-pond-ecosystem.
 
 
 import groupHens from '../../assets/images/group-hens.jpg';
+import RichFeed from '../../assets/images/rich-feed.jpg';
+
+import InsideWater from '../../assets/images/inside-water-fish.jpg';
+
+import ChickenNew from '../../assets/images/Chiken.png';
+
+import Tandoori from '../../assets/images/Tandoori-fish.png';
+
+import FishSVG from '../../assets/images/Murrel-Fish.svg';
+
 
 
 
@@ -388,6 +398,7 @@ const farmData: any = {
       sectionTitle: { plain: "Free-Range", highlight: "Country Chicken" },
       whatsappMsg: "Hi%2C%20I%27d%20like%20to%20check%20today%27s%20country%20chicken%20availability"
     },
+    anatomyImage: ChickenNew,
     anatomy: [
       {
         label: "Nutrition", title: "Natural Foraging",
@@ -631,7 +642,7 @@ const farmData: any = {
       perfectFor: [
         { label: "Classic murrel fish curry and pepper fry", image: "https://images.unsplash.com/photo-1620894580123-466ad3a0ca06?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
         { label: "Steamed or pan-seared fillets for clean eating", image: "https://images.unsplash.com/photo-1602022131768-033a8796e78d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYW4lMjBzZWFyZWQlMjBmaXNoJTIwZmlsbGV0JTIwY2xlYW4lMjBwbGF0ZXxlbnwxfHx8fDE3NzI0MzQ0Njd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" },
-        { label: "Grills, tandoor, and slow poaching for delicate texture", image: "https://images.unsplash.com/photo-1720569594980-0b7a5450d989?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwZmlzaCUyMHRhbmRvb3IlMjBydXN0aWMlMjBkYXJrfGVufDF8fHx8MTc3MjQzNDQ2OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" }
+        { label: "Grills, tandoor, and slow poaching for delicate texture", image: Tandoori }
       ],
       whatYouGet: [
         "Traceable, responsibly raised murrel fish",
@@ -642,7 +653,7 @@ const farmData: any = {
       sectionTitle: { plain: "Naturally Raised", highlight: "Murrel Fish" },
       whatsappMsg: "Hi%2C%20I%27d%20like%20to%20order%20Murrel%20Fish"
     },
-    anatomyImage: "https://images.unsplash.com/photo-1574310854034-3bcbfaa248b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXJyZWwlMjBmaXNoJTIwc3dpbW1pbmclMjBjbGVhciUyMHdhdGVyJTIwdW5kZXJ3YXRlcnxlbnwxfHx8fDE3Njg2Mjk3MTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    anatomyImage: FishSVG,
     anatomy: [
       {
         label: "Nutrition", title: "Clean Diet",
@@ -718,7 +729,7 @@ const farmData: any = {
         {
           title: "Natural & Protein-Rich Feed",
           icon: Wheat,
-          image: NaturalProtienRichFeed,
+          image: RichFeed,
           content: (
             <div className="space-y-4">
               <p>Our Murrel fish are fed with a balanced natural diet, including high-quality protein sources and natural ingredients.</p>
@@ -794,7 +805,7 @@ const farmData: any = {
         {
           title: "Why Haritha Murrel Fish?",
           icon: Award,
-          image: newFish,
+          image: InsideWater,
           content: (
             <div className="space-y-4">
               <p className="font-serif text-lg text-[#0A1610]">Healthier, Safer & Tastier.</p>
@@ -930,7 +941,7 @@ export default function FarmDetail() {
     <div className="relative bg-[#FDFCF8] min-h-screen">
 
       {/* --- HERO SECTION --- */}
-      <section ref={heroRef} className="relative h-[110vh] w-full overflow-hidden flex items-end justify-center pb-24 pt-28 mt-16 md:pt-36">
+      <section ref={heroRef} className="relative h-[110vh] w-full overflow-hidden flex items-end justify-center pb-24 pt-28  md:pt-36">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <img
             src={data.heroImage}
@@ -1016,17 +1027,13 @@ export default function FarmDetail() {
                   {type === 'sheep' ? (
                     <Sheep />
                   ) : (
-                    <div className="relative w-[400px] h-[400px] rounded-full overflow-hidden border-2 border-[#293F11]/20 p-2 bg-white">
-                      <div className="w-full h-full rounded-full overflow-hidden relative">
-                        <img
-                          src={data.anatomyImage}
-                          alt={data.title}
-                          className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                        />
-                        {/* Overlay to blend it slightly with the editorial vibe */}
-                        <div className="absolute inset-0 bg-[#C5A059]/10 mix-blend-multiply" />
-                      </div>
-                    </div>
+                        <div className="relative w-[500px] h-[500px] flex items-center justify-center">
+            <img
+              src={data.anatomyImage}
+              alt={data.title}
+              className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-700"
+            />
+          </div>
                   )}
                 </motion.div>
 
