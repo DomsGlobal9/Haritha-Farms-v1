@@ -13,6 +13,7 @@ import FarmDetail from './pages/FarmDetail';
 import Contact from './pages/Contact';
 import Practices from './pages/Practices';
 import Transparency from './pages/Transparency';
+
 import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
 import Visit from './pages/Visit';
