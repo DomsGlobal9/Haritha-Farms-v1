@@ -645,8 +645,9 @@ export default function Feed() {
               <div className="h-px w-12 bg-[#C5A059]" />
             </div>
             <h3 className="text-3xl md:text-4xl font-serif mb-6 leading-tight">
-              Want to Know What's in <span className="italic text-[#C5A059]">Today's Feed?</span>
-            </h3>
+  <span className="text-white">Want to Know What's in</span>{" "}
+  <span className="italic text-[#C5A059]">Today's Feed?</span>
+</h3>
             <p className="text-[#F2F0E9]/70 text-lg font-light mb-10 max-w-2xl mx-auto leading-relaxed">
               We share our daily fodder mix, what greens are growing this month, and how each crop supports livestock health.
             </p>

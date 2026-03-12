@@ -5,56 +5,70 @@ import { X } from 'lucide-react';
 import { FadeIn } from '../components/ui/fade-in';
 import { CTASection } from '../components/ui/CTASection';
 
-import {
-  // Farm & Landscape
-  heroBirdImage as imgHeroBird,
-  heroImage as imgHeroOld,
-  philosophyImage as imgPhilosophy,
-  handsSoilImage as imgHandsSoil,
-  soilImage as imgSoil,
-  farmLandscapeImage as imgFarmLandscape,
-  cropFieldImage as imgCropField,
-  farmGrassImage as imgFarmGrass,
-  farmAerialImage as imgFarmAerial,
-  naturalGrazingImage as imgNaturalGrazing,
-  fodderImage as imgFodder,
-  // Chicken / Hen
-  chickenHeroImage as imgChickenHero,
-  henCardImage as imgHenCard,
-  roosterImage as imgRooster,
-  countryChickenImage as imgCountryChicken,
-  chickenPractice1 as imgPractice1,
-  chickenPractice2 as imgPractice2,
-  chickenPractice3 as imgPractice3,
-  chickenPractice4 as imgPractice4,
-  chickenPractice5 as imgPractice5,
-  chickenPractice6 as imgPractice6,
-  antibioticFreeChickenImage as imgAntibioticFree,
-  stressFreeChickenImage as imgStressFree,
-  cleanWaterChickenImage as imgCleanWater,
-  ethicalSustainableImage as imgEthical,
-  whyHarithaChickenImage as imgWhyHaritha,
-  diaryChickenFlockImage as imgDiaryFlock,
-  diaryChickenGrassImage as imgDiaryGrass,
-  diaryChickenNestImage as imgDiaryNest,
-  chickenFeedImage as imgChickenFeed,
-  chickenFarmImage as imgChickenFarm,
-  freeRangePoultryImage as imgFreeRangePoultry,
-  // Sheep
-  sheepHeroImage as imgSheepHero,
-  sheepCardImage as imgSheepCard,
-  sheepAboutImage as imgSheepAbout,
-  sheepGrazingImage as imgSheepGrazing,
-  goatsImage as imgGoats,
-  sheepFeedImage as imgSheepFeed,
-  // Fish
-  fishCardImage as imgFishCard,
-  murrelDetailImage as imgMurrelDetail,
-  murrelAboutImage as imgMurrelAbout,
-  murrelFarmsImage as imgMurrelFarms,
-  murrelFeedImage as imgMurrelFeed,
-  fishHeroImage as imgFishHero,
-} from '../../assets';
+
+import sheepFarmingMain from '../../assets/images/sheepFarming.jpg';
+import naturalRange from '../../assets/images/goat1.jpg';
+import cleanBalanced from '../../assets/images/goat2.jpg';
+import pureWater from '../../assets/images/pure-water.jpg';
+import preventHealth from '../../assets/images/prevent-health.jpg';
+import stressfree from '../../assets/images/stressFree.jpg';
+import TheResultGoat from '../../assets/images/the-result-goat.jpg';
+
+import CountryHenFarming from '../../assets/images/country-hen-farming.jpg';
+import naturalFeed from '../../assets/images/natural-feed.jpg';
+import AntibioticHormone from '../../assets/images/antibiotic-harmone.jpg';
+import stressFreeEnvironment from '../../assets/images/environment.jpg';
+import cleanWaterImmunity from '../../assets/images/clean-water-immunity.jpg';
+import EthicalSustainability from '../../assets/images/ethical-sustainbility.jpg';
+import WhyHarithaChicken from '../../assets/images/why-haritha.jpg';
+import VisualDiary from '../../assets/images/visiual-diary.jpg';
+
+
+import sheepFarming1 from '../../assets/images/sheepfarming-1.jpg';
+
+import sheepFarming2 from '../../assets/images/sheepfarming2.jpg';
+import sheepFarming3 from '../../assets/images/sheepfarming3.jpg';
+import sheepFarming4 from '../../assets/images/sheepfarming4.jpg';
+
+import newFish from '../../assets/images/new-fish.jpg';
+import FishFarmingMain from '../../assets/images/Fish-Farming-Main.jpg';
+import FishFarmingPesticides from '../../assets/images/pestisides.jpg';
+import NaturalPond from '../../assets/images/natural-pond.jpg';
+import ChemicalAntiBioticFree from '../../assets/images/chemical-antibiotic-free.jpg';
+import NaturalProtienRichFeed from '../../assets/images/natural-protien-rich-feed.jpg';
+import StressFreeEnv from '../../assets/images/stress-free-env.jpg';
+import SlowHealthGrowth from '../../assets/images/slow-health-growth.jpg';
+import WhyHaritha2 from '../../assets/images/why-hrtha.jpg';
+import NewNaturalEcoSystem from '../../assets/images/new-natural-pond-ecosystem.jpg';
+
+
+import groupHens from '../../assets/images/group-hens.jpg';
+import RichFeed from '../../assets/images/rich-feed.jpg';
+
+import InsideWater from '../../assets/images/inside-water-fish.jpg';
+
+import ChickenNew from '../../assets/images/Chiken.png';
+
+import Tandoori from '../../assets/images/Tandoori-fish.png';
+
+import FishSVG from '../../assets/images/Murrel-Fish.svg';
+
+import GalleryGoat1 from '../../assets/images/gallery-goat1.jpg';
+import GalleryGoat2 from '../../assets/images/gallery-goat2.jpg';
+import GalleryGoat3 from '../../assets/images/gallery-goat3.jpg';
+import GalleryGoat4 from '../../assets/images/gallery-goat4.jpg';
+import GalleryGoat5 from '../../assets/images/gallery-goat5.jpg';
+import GalleryGoat6 from '../../assets/images/gallery-goat6.jpg';
+
+
+import Hen1 from '../../assets/images/hen1.jpg';
+import Hen22 from '../../assets/images/hen22.jpg';
+import Hen3 from '../../assets/images/hen3.jpg';
+import Hen4 from '../../assets/images/hen4.jpg';
+import Hen5 from '../../assets/images/hen5.jpg';
+import Hen6 from '../../assets/images/hen6.jpg';
+import Hen7 from '../../assets/images/hen7.jpg';
+
 
 // ── Gallery Data ──
 type Category = 'all' | 'farm' | 'chicken' | 'sheep' | 'fish';
@@ -66,57 +80,58 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
-  // Farm & Landscape
-  { src: imgHeroBird, alt: "Bird perched on crops at sunrise — Haritha Farms", category: "farm" },
-  { src: imgFarmLandscape, alt: "Panoramic view of Haritha Farms", category: "farm" },
-  { src: imgFarmAerial, alt: "Aerial view of farm fields", category: "farm" },
-  { src: imgCropField, alt: "Organic crop field at Haritha Farms", category: "farm" },
-  { src: imgFarmGrass, alt: "Fresh green grass on farm pastures", category: "farm" },
-  { src: imgNaturalGrazing, alt: "Natural grazing land and soil", category: "farm" },
-  { src: imgPhilosophy, alt: "Our farming philosophy — clean and honest", category: "farm" },
-  { src: imgHandsSoil, alt: "Hands nurturing rich organic soil", category: "farm" },
-  { src: imgSoil, alt: "Healthy soil — foundation of clean farming", category: "farm" },
-  { src: imgFodder, alt: "Organic fodder grown on-farm", category: "farm" },
-  { src: imgHeroOld, alt: "Haritha Farms fields — green pastures", category: "farm" },
 
-  // Chicken / Hen
-  { src: imgChickenHero, alt: "Country rooster — free-range at Haritha Farms", category: "chicken" },
-  { src: imgRooster, alt: "Rooster portrait — natural rearing", category: "chicken" },
-  { src: imgHenCard, alt: "Free-range country hen", category: "chicken" },
-  { src: imgCountryChicken, alt: "Country chicken (Natu Kodi)", category: "chicken" },
-  { src: imgDiaryFlock, alt: "Flock of chickens on open pasture", category: "chicken" },
-  { src: imgDiaryGrass, alt: "White chicken foraging in green grass", category: "chicken" },
-  { src: imgDiaryNest, alt: "Black hen with egg in woven basket", category: "chicken" },
-  { src: imgFreeRangePoultry, alt: "Free-range poultry in natural environment", category: "chicken" },
-  { src: imgChickenFarm, alt: "Daily life at the chicken farm", category: "chicken" },
-  { src: imgAntibioticFree, alt: "Antibiotic & hormone-free rearing", category: "chicken" },
-  { src: imgStressFree, alt: "Stress-free environment for poultry", category: "chicken" },
-  { src: imgCleanWater, alt: "Clean water & natural immunity support", category: "chicken" },
-  { src: imgEthical, alt: "Ethical & sustainable poultry care", category: "chicken" },
-  { src: imgWhyHaritha, alt: "Why Haritha Chicken — golden-lit hen", category: "chicken" },
-  { src: imgPractice1, alt: "Chicken rearing practice — antibiotic-free", category: "chicken" },
-  { src: imgPractice2, alt: "Chicken rearing practice — stress-free", category: "chicken" },
-  { src: imgPractice3, alt: "Chicken rearing practice — natural feed", category: "chicken" },
-  { src: imgPractice4, alt: "Chicken rearing practice — clean water", category: "chicken" },
-  { src: imgPractice5, alt: "Chicken rearing practice — ethical care", category: "chicken" },
-  { src: imgPractice6, alt: "Chicken rearing practice — why Haritha", category: "chicken" },
-  { src: imgChickenFeed, alt: "Organic chicken feed — farm-grown grains", category: "chicken" },
+  // Farm
+  { src: sheepFarmingMain, alt: "Sheep farming landscape", category: "farm" },
+  { src: naturalRange, alt: "Natural grazing range", category: "farm" },
+  { src: cleanBalanced, alt: "Balanced organic farming", category: "farm" },
+  { src: pureWater, alt: "Pure water systems on farm", category: "farm" },
+
+  // Chicken
+  { src: CountryHenFarming, alt: "Country hen farming", category: "chicken" },
+  { src: naturalFeed, alt: "Natural chicken feed", category: "chicken" },
+  { src: AntibioticHormone, alt: "Antibiotic free poultry", category: "chicken" },
+  { src: stressFreeEnvironment, alt: "Stress free poultry environment", category: "chicken" },
+  { src: cleanWaterImmunity, alt: "Clean water immunity system", category: "chicken" },
+  { src: EthicalSustainability, alt: "Ethical poultry sustainability", category: "chicken" },
+  { src: WhyHarithaChicken, alt: "Why Haritha chicken", category: "chicken" },
+  { src: VisualDiary, alt: "Chicken visual diary", category: "chicken" },
+  { src: groupHens, alt: "Group of free range hens", category: "chicken" },
+  { src:Hen1, alt: "Group of free range hens", category: "chicken" },
+  { src: Hen22, alt: "Group of free range hens", category: "chicken" },
+  { src: Hen3, alt: "Group of free range hens", category: "chicken" },
+  { src: Hen4, alt: "Group of free range hens", category: "chicken" },
+  { src: Hen5, alt: "Group of free range hens", category: "chicken" },
+  { src: Hen6, alt: "Group of free range hens", category: "chicken" },
+  { src: Hen7, alt: "Group of free range hens", category: "chicken" },
+ 
 
   // Sheep
-  { src: imgSheepHero, alt: "Sheep flock grazing on green pastures", category: "sheep" },
-  { src: imgSheepCard, alt: "Sheep & lamb — pasture-raised", category: "sheep" },
-  { src: imgSheepAbout, alt: "Sheep portrait — natural wool and rearing", category: "sheep" },
-  { src: imgSheepGrazing, alt: "Sheep grazing on open farmland", category: "sheep" },
-  { src: imgGoats, alt: "Goats on Haritha Farms pastures", category: "sheep" },
-  { src: imgSheepFeed, alt: "Organic sheep feed and nutrition", category: "sheep" },
+ 
+
+  { src: sheepFarming3, alt: "Healthy sheep livestock", category: "sheep" },
+  { src: sheepFarming4, alt: "Sheep pasture", category: "sheep" },
+   { src: GalleryGoat1, alt: "Sheep pasture", category: "sheep" },
+    { src: GalleryGoat2, alt: "Sheep pasture", category: "sheep" },
+     { src: GalleryGoat3, alt: "Sheep pasture", category: "sheep" },
+      { src: GalleryGoat4, alt: "Sheep pasture", category: "sheep" },
+       { src: GalleryGoat5, alt: "Sheep pasture", category: "sheep" },
+        { src: GalleryGoat6, alt: "Sheep pasture", category: "sheep" },
+  { src: TheResultGoat, alt: "Healthy sheep farming result", category: "sheep" },
 
   // Fish
-  { src: imgFishHero, alt: "Murrel fish in natural pond — Haritha Farms aquaculture", category: "fish" },
-  { src: imgFishCard, alt: "Murrel fish — clean aquaculture", category: "fish" },
-  { src: imgMurrelDetail, alt: "Murrel fish close-up — firm and clean", category: "fish" },
-  { src: imgMurrelAbout, alt: "Murrel snakehead — natural pond rearing", category: "fish" },
-  { src: imgMurrelFarms, alt: "Murrel fish farming — balanced ponds", category: "fish" },
-  { src: imgMurrelFeed, alt: "Fish feed — natural aquaculture nutrition", category: "fish" },
+  { src: FishFarmingMain, alt: "Fish farming pond", category: "fish" },
+  { src: newFish, alt: "Fresh murrel fish", category: "fish" },
+  { src: FishFarmingPesticides, alt: "Chemical free fish farming", category: "fish" },
+  { src: NaturalPond, alt: "Natural pond ecosystem", category: "fish" },
+  
+ 
+ 
+  
+  { src: NewNaturalEcoSystem, alt: "Natural fish ecosystem", category: "fish" },
+  { src: InsideWater, alt: "Inside water fish habitat", category: "fish" },
+  { src: RichFeed, alt: "Fish rich feed", category: "fish" },
+ 
 ];
 
 const categories: { key: Category; label: string }[] = [
@@ -162,7 +177,7 @@ export default function Gallery() {
       </section>
 
       {/* ── Filter Bar ── */}
-      <section className="sticky top-[72px] z-30 border-b border-border/30" style={{ backgroundColor: 'rgba(242, 240, 233, 0.92)', backdropFilter: 'blur(12px)' }}>
+      <section className="sticky top-[0] z-30 border-b border-border/30" style={{ backgroundColor: 'rgba(242, 240, 233, 0.92)', backdropFilter: 'blur(12px)' }}>
         <div className="container mx-auto px-6">
           <div className="flex items-center gap-1 md:gap-2 overflow-x-auto py-4 scrollbar-hide">
             {categories.map(cat => (

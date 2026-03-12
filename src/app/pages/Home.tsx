@@ -113,15 +113,20 @@ export default function Home() {
         {/* Section Header */}
         <div className="container mx-auto px-[24px] py-8 md:py-12 shrink-0">
           <FadeIn>
-            <div className="flex items-center gap-6 mb-4">
-              <div className="h-px w-16 bg-[#C5A059]" />
-              <span className="text-[#C5A059] text-xs font-bold tracking-[0.3em] uppercase">What We Raise</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-serif max-w-3xl leading-none text-[rgb(187,241,228)]">
-              Honest livestock, raised right.<br />
-              <span className="text-[#F2F0E9]/40">No hormones. No shortcuts.</span>
-            </h2>
-          </FadeIn>
+  <div className="flex items-center gap-6 mb-4">
+    <div className="h-px w-16 bg-[#C5A059]" />
+    <span className="text-[#C5A059] text-xs font-bold tracking-[0.3em] uppercase">
+      What We Raise
+    </span>
+  </div>
+
+  <h2 className="text-3xl md:text-5xl font-serif max-w-3xl leading-none text-[rgb(187,241,228)]">
+    Honest livestock, raised right.<br />
+    <span className="text-white">
+      No hormones. No shortcuts.
+    </span>
+  </h2>
+</FadeIn>
         </div>
 
         {/* Elastic Gallery */}

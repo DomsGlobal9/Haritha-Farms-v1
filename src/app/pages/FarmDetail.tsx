@@ -1359,9 +1359,9 @@ export default function FarmDetail() {
                   </div>
 
                   <h3 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">
-                    {data.culinary.titleStart} <span className="italic text-[#C5A059]">{data.culinary.titleHighlight}</span>
-                  </h3>
-
+  <span className="text-white">{data.culinary.titleStart}</span>{" "}
+  <span className="italic text-[#C5A059]">{data.culinary.titleHighlight}</span>
+</h3>
                   <p className="text-[#F2F0E9]/70 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
                     {data.culinary.description}
                   </p>
@@ -1381,7 +1381,9 @@ export default function FarmDetail() {
       <section className="py-24 bg-[#0A1610] text-[#F2F0E9] px-6 border-t border-white/10">
         <div className="container mx-auto max-w-7xl">
           <div className="flex items-center justify-between mb-16">
-            <h3 className="text-3xl md:text-4xl font-serif">Visual Diary</h3>
+            <h3 className="text-3xl md:text-4xl font-serif text-white">
+  Visual Diary
+</h3>
             <Link to="/gallery" className="hidden md:flex items-center text-xs font-bold tracking-[0.2em] uppercase text-[#C5A059] hover:text-white transition-colors">
               View Full Gallery <ArrowRight size={14} className="ml-2" />
             </Link>

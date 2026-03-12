@@ -211,7 +211,7 @@ function AnimatedAnimals() {
 function DomsAttribution() {
   return (
     <motion.a
-      href="https://domsglobal.com"
+      href="https://domsglobal.co"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Handcrafted by DOMS Global"
@@ -224,12 +224,19 @@ function DomsAttribution() {
         whileHover={{ width: 40 }}
         transition={{ duration: 0.4 }}
       />
-      <span className="text-[10px] tracking-[1.8px] uppercase text-white/70" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300 }}>
-        Handcrafted by
-      </span>
-      <span className="text-[11px] tracking-[3.08px] uppercase text-[#C9A84C] group-hover:text-[#E0BF6E] transition-colors duration-300" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 400 }}>
-        DOMS Global
-      </span>
+     <span
+  className="text-[10px] tracking-[3px] uppercase text-white"
+  style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300 }}
+>
+  Handcrafted by
+</span>
+
+<span
+  className="text-[15px] tracking-[3.09px] uppercase text-[#ff5c00] hover:text-[#ff5c00] text-bold transition-colors duration-300"
+  style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 700 }}
+>
+  DOMS Global
+</span>
       <svg className="shrink-0" width="9" height="9" viewBox="0 0 9 9" fill="none">
         <g clipPath="url(#doms-ext)">
           <path d="M5.625 1.125H7.875V3.375" stroke="#C9A84C" strokeOpacity="0.6" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
