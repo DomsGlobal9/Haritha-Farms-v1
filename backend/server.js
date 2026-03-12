@@ -8,6 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Server is running successfully 🚀");
+});
+
 const filePath = "./requests.xlsx";
 
 app.post("/submit", (req, res) => {
