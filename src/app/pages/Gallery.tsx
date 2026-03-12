@@ -82,10 +82,7 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
 
   // Farm
-  { src: sheepFarmingMain, alt: "Sheep farming landscape", category: "farm" },
-  { src: naturalRange, alt: "Natural grazing range", category: "farm" },
-  { src: cleanBalanced, alt: "Balanced organic farming", category: "farm" },
-  { src: pureWater, alt: "Pure water systems on farm", category: "farm" },
+
 
   // Chicken
   { src: CountryHenFarming, alt: "Country hen farming", category: "chicken" },
