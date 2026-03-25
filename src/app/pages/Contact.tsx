@@ -79,7 +79,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Phone</h3>
-                    <p className="text-muted-foreground font-light">+91 98765 43210</p>
+                    <p className="text-muted-foreground font-light">+91 9632791544</p>
                   </div>
                 </div>
 
@@ -89,7 +89,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-1">WhatsApp</h3>
-                    <p className="text-muted-foreground font-light">+91 98765 43210</p>
+                    <p className="text-muted-foreground font-light">+91 9632791544</p>
                   </div>
                 </div>
 
@@ -99,7 +99,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Email</h3>
-                    <p className="text-muted-foreground font-light">hello@harithafarms.com</p>
+                    <p className="text-muted-foreground font-light">operations@harithafarms.com</p>
                   </div>
                 </div>
               </div>
@@ -109,7 +109,7 @@ export default function Contact() {
             <FadeIn delay={0.2} className="bg-white p-8 md:p-12 border border-border shadow-sm">
               <h2 className="text-2xl font-serif text-primary mb-8">Request Form</h2>
               <p className="text-xs text-muted-foreground mb-6 italic">
-                Note: Since no database is connected, submissions will be logged to the console only.
+                
               </p>
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="space-y-2">

@@ -247,7 +247,7 @@ export function Header() {
             >
               <div aria-hidden="true" className="absolute border border-[rgba(26,60,52,0.2)] inset-0 pointer-events-none rounded-full" />
               <span className="font-bold leading-[15px] relative shrink-0 text-[#1a3c34] text-[10px] tracking-[1.5px] uppercase">
-                Contact Us
+                  BULK ENQUIRE
               </span>
             </Link>
           </Button>
