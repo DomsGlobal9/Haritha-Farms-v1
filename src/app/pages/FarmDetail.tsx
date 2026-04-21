@@ -681,32 +681,43 @@ const farmData: any = {
           image: NewNaturalEcoSystem,
             content: "test",
         },
-        {
-          title: "Chemical & Antibiotic-Free",
-          icon: Stethoscope,
-          image: FishFarmingPesticides,
-          content: () => (
-            <div className="space-y-4">
-              <p>We follow zero-antibiotic and zero-hormone practices.</p>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 size={14} className="text-[#C5A059]" />
-                    <span className="text-sm text-muted-foreground">No growth enhancers</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 size={14} className="text-[#C5A059]" />
-                    <span className="text-sm text-muted-foreground">No harmful chemicals</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 size={14} className="text-[#C5A059]" />
-                    <span className="text-sm text-muted-foreground">No artificial color or feed boosters</span>
-                  </li>
-                </ul>
-              </ul>
-              <p className="text-sm font-medium text-[#0A1610]">Healthy fish grow at their own pace, producing safe, residue-free meat.</p>
-            </div>
-          )
-        },
+       {
+  title: "Chemical & Antibiotic-Free",
+  icon: Stethoscope,
+  image: FishFarmingPesticides,
+  content: () => (
+    <div className="space-y-4">
+      <p>We follow zero-antibiotic and zero-hormone practices.</p>
+
+      <ul className="space-y-2">
+        <li className="flex items-center gap-3">
+          <CheckCircle2 size={14} className="text-[#C5A059]" />
+          <span className="text-sm text-muted-foreground">
+            No growth enhancers
+          </span>
+        </li>
+
+        <li className="flex items-center gap-3">
+          <CheckCircle2 size={14} className="text-[#C5A059]" />
+          <span className="text-sm text-muted-foreground">
+            No harmful chemicals
+          </span>
+        </li>
+
+        <li className="flex items-center gap-3">
+          <CheckCircle2 size={14} className="text-[#C5A059]" />
+          <span className="text-sm text-muted-foreground">
+            No artificial color or feed boosters
+          </span>
+        </li>
+      </ul>
+
+      <p className="text-sm font-medium text-[#0A1610]">
+        Healthy fish grow at their own pace, producing safe, residue-free meat.
+      </p>
+    </div>
+  )
+},
         {
           title: "Natural & Protein-Rich Feed",
           icon: Wheat,
