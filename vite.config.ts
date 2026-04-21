@@ -138,6 +138,54 @@ function staticFilesPlugin(): Plugin {
       contentType: 'text/plain; charset=utf-8',
       extra: {},
       fallback: ROBOTS_TXT_CONTENT,
+    },    {
+      src: path.resolve(__dirname, 'public/_redirects'),
+      url: null, // not served in dev
+      contentType: null,
+      extra: {},
+      fallback: '/*    /index.html   200',
+    },
+    {
+      src: path.resolve(__dirname, 'public/_headers'),
+      url: null, // not served in dev
+      contentType: null,
+      extra: {},
+      fallback: `/robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+  X-Content-Type-Options: nosniff
+  Cache-Control: public, max-age=3600
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable`,
+    },    {
+      src: path.resolve(__dirname, 'public/_redirects'),
+      url: null, // not served in dev
+      contentType: null,
+      extra: {},
+      fallback: '/*    /index.html   200',
+    },
+    {
+      src: path.resolve(__dirname, 'public/_headers'),
+      url: null, // not served in dev
+      contentType: null,
+      extra: {},
+      fallback: `/robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+  X-Content-Type-Options: nosniff
+  Cache-Control: public, max-age=3600
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable`,
     },
   ]
 
@@ -206,5 +254,8 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+  },
+  server: {
+    historyApiFallback: true,
   },
 })
