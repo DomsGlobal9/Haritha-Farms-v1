@@ -151,7 +151,7 @@ const farmData: any = {
           title: "Natural & Free-Range Grazing",
           icon: Sprout,
           image: naturalRange,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>Our sheep are free-range raised, allowing them to graze naturally on open pastures instead of being confined.</p>
               <div className="bg-[#FDFCF8] border border-[#C5A059]/20 p-4 rounded-sm">
@@ -177,7 +177,7 @@ const farmData: any = {
           title: "Clean & Balanced Nutrition",
           icon: Wheat,
           image: cleanBalanced,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>We follow a natural feeding system, combining native grasses, green fodder, and farm-grown feed free from harmful chemicals.</p>
               <div className="grid grid-cols-1 gap-3">
@@ -212,7 +212,7 @@ const farmData: any = {
           title: "Pure Water & Hygiene",
           icon: Droplets,
           image: pureWater,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>Clean water and hygienic shelters are non-negotiable at Haritha Farms.</p>
               <ul className="space-y-2">
@@ -235,7 +235,7 @@ const farmData: any = {
           title: "Preventive Health Care",
           icon: Stethoscope,
           image: preventHealth,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>Instead of excessive medication, we focus on preventive and natural health management.</p>
               <div className="bg-[#FDFCF8] border border-[#0A1610]/10 p-4">
@@ -271,7 +271,7 @@ const farmData: any = {
           title: "Stress-Free Handling",
           icon: Heart,
           image: stressfree,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>Stress affects meat quality. Our sheep are handled with care, patience, and respect at every stage.</p>
               <div className="grid grid-cols-3 gap-2 text-center">
@@ -296,7 +296,7 @@ const farmData: any = {
           title: "The Result",
           icon: Award,
           image: TheResultGoat,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p className="font-serif text-lg text-[#0A1610]">Healthier, Cleaner & Tastier Meat.</p>
               <p className="text-sm text-muted-foreground">Because of our practices, Haritha Farms sheep meat is:</p>
@@ -373,8 +373,6 @@ const farmData: any = {
     title: "Country Hen Farming",
     heroImage: CountryHenFarming,
     intro: "Experience chicken the way it was always meant to be. Haritha Farms' country chicken (Natu Kodi) is raised free-range, allowed to roam naturally, and nurtured with organic, farm-grown fodder. No hormones, no artificial growth promoters — just slow, natural growth that produces genuinely clean meat with unmatched flavour.",
-    anatomyImage: roosterImage,
-    product: {
       headline: "Country Chicken (Natu Kodi) — Free-Range, Hormone-Free, Naturally Raised",
       description: "Each bird grows at its own natural pace, resulting in meat that is leaner, richer, and far more nutritious — an ideal choice for families seeking true country chicken.",
       whyDifferent: [
@@ -426,7 +424,7 @@ const farmData: any = {
           title: "Natural Feed & Nutrition",
           icon: Wheat,
           image: naturalFeed,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>Our chickens are fed a carefully formulated natural diet rich in grains, plant proteins, and essential minerals.</p>
               <div className="bg-[#FDFCF8] border border-[#C5A059]/20 p-4 rounded-sm">
@@ -462,7 +460,7 @@ const farmData: any = {
           title: "Antibiotic & Hormone-Free",
           icon: Stethoscope,
           image: AntibioticHormone,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>We follow strict antibiotic-free and hormone-free farming practices.</p>
               <ul className="space-y-2">
@@ -485,7 +483,7 @@ const farmData: any = {
           title: "Stress-Free Environment",
           icon: Heart,
           image: stressFreeEnvironment,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>Healthy chickens grow in a clean, well-ventilated, low-stress environment.</p>
               <div className="grid grid-cols-3 gap-2 text-center">
@@ -510,7 +508,7 @@ const farmData: any = {
           title: "Clean Water & Immunity",
           icon: Droplets,
           image: cleanWaterImmunity,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>We provide filtered, clean drinking water at all times.</p>
               <div className="bg-[#FDFCF8] border border-[#0A1610]/10 p-4">
@@ -539,7 +537,7 @@ const farmData: any = {
           title: "Ethical & Sustainable",
           icon: Sprout,
           image: EthicalSustainability,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>Our poultry practices align with ethical and eco-friendly farming principles.</p>
               <ul className="space-y-2">
@@ -562,7 +560,7 @@ const farmData: any = {
           title: "Why Haritha Chicken?",
           icon: Award,
           image: WhyHarithaChicken,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p className="font-serif text-lg text-[#0A1610]">Healthier, Safer & Tastier.</p>
               <div className="grid grid-cols-2 gap-3">
@@ -681,46 +679,29 @@ const farmData: any = {
           title: "Natural Pond Ecosystem",
           icon: Droplets,
           image: NewNaturalEcoSystem,
-          content: (
-            <div className="space-y-4">
-              <p>We raise Murrel fish in freshwater earthen ponds that closely mimic their natural habitat.</p>
-              <div className="bg-[#FDFCF8] border border-[#C5A059]/20 p-4 rounded-sm">
-                <strong className="block text-[#0A1610] font-serif mb-2 text-sm">Our Methods:</strong>
-                <ul className="space-y-2">
-                  {[
-                    "Clean, mineral-rich water",
-                    "Controlled stocking density to avoid stress",
-                    "Regular water quality monitoring"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C5A059] flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <p className="text-sm italic text-[#C5A059] border-l-2 border-[#C5A059] pl-3 py-1">Allows fish to grow naturally, improving muscle strength and meat quality.</p>
-            </div>
-          )
+            content: "test",
         },
         {
           title: "Chemical & Antibiotic-Free",
           icon: Stethoscope,
           image: FishFarmingPesticides,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>We follow zero-antibiotic and zero-hormone practices.</p>
-              <ul className="space-y-2">
-                {[
-                  "No growth enhancers",
-                  "No harmful chemicals",
-                  "No artificial color or feed boosters"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-3">
                     <CheckCircle2 size={14} className="text-[#C5A059]" />
-                    <span className="text-sm text-muted-foreground">{item}</span>
+                    <span className="text-sm text-muted-foreground">No growth enhancers</span>
                   </li>
-                ))}
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={14} className="text-[#C5A059]" />
+                    <span className="text-sm text-muted-foreground">No harmful chemicals</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 size={14} className="text-[#C5A059]" />
+                    <span className="text-sm text-muted-foreground">No artificial color or feed boosters</span>
+                  </li>
+                </ul>
               </ul>
               <p className="text-sm font-medium text-[#0A1610]">Healthy fish grow at their own pace, producing safe, residue-free meat.</p>
             </div>
@@ -730,7 +711,7 @@ const farmData: any = {
           title: "Natural & Protein-Rich Feed",
           icon: Wheat,
           image: RichFeed,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>Our Murrel fish are fed with a balanced natural diet, including high-quality protein sources and natural ingredients.</p>
               <div className="grid grid-cols-3 gap-2 text-center">
@@ -754,7 +735,7 @@ const farmData: any = {
           title: "Stress-Free Environment",
           icon: Heart,
           image: NaturalPond,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>Stress directly affects fish health and meat quality. At Haritha Farms, ponds are not overcrowded and handling is minimal.</p>
               <div className="bg-[#FDFCF8] border border-[#0A1610]/10 p-4">
@@ -783,7 +764,7 @@ const farmData: any = {
           title: "Slow & Healthy Growth",
           icon: Sprout,
           image: FishFarmingMain,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p>Unlike fast commercial farming, we allow Murrel fish to grow slowly and naturally.</p>
               <ul className="space-y-2">
@@ -806,7 +787,7 @@ const farmData: any = {
           title: "Why Haritha Murrel Fish?",
           icon: Award,
           image: InsideWater,
-          content: (
+          content: () => (
             <div className="space-y-4">
               <p className="font-serif text-lg text-[#0A1610]">Healthier, Safer & Tastier.</p>
               <div className="grid grid-cols-2 gap-3">
