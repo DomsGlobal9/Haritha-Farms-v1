@@ -56,17 +56,6 @@ import Tandoori from '../../assets/images/Tandoori-fish.png';
 import FishSVG from '../../assets/images/Murrel-Fish.svg';
 
 
-
-
-
-
-
-
-
-
-
-
-
 import {
   murrelDetailImage as murrelFishImage,
   sheepGrazingImage,
@@ -145,7 +134,7 @@ const farmData: any = {
     practices: {
       title: "Our Sheep Farming Practices",
       subtitle: "Naturally Raised. Nutritionally Superior. Ethically Farmed.",
-      description: "At Haritha Farms, sheep farming is not just about production — it’s about raising healthier animals that produce cleaner, safer, and more nutritious meat. Our practices are deeply rooted in natural grazing, balanced nutrition, animal welfare, and chemical-free care.",
+      description: "At Haritha Farms, sheep farming is not just about production — it's about raising healthier animals that produce cleaner, safer, and more nutritious meat. Our practices are deeply rooted in natural grazing, balanced nutrition, animal welfare, and chemical-free care.",
       items: [
         {
           title: "Natural & Free-Range Grazing",
@@ -369,10 +358,15 @@ const farmData: any = {
     ],
     ctaText: "Visit Our Farm"
   },
+
+  // ─────────────────────────────────────────────
+  // HEN  (FIX: product: {} wrapper restored)
+  // ─────────────────────────────────────────────
   hen: {
     title: "Country Hen Farming",
     heroImage: CountryHenFarming,
     intro: "Experience chicken the way it was always meant to be. Haritha Farms' country chicken (Natu Kodi) is raised free-range, allowed to roam naturally, and nurtured with organic, farm-grown fodder. No hormones, no artificial growth promoters — just slow, natural growth that produces genuinely clean meat with unmatched flavour.",
+    product: {
       headline: "Country Chicken (Natu Kodi) — Free-Range, Hormone-Free, Naturally Raised",
       description: "Each bird grows at its own natural pace, resulting in meat that is leaner, richer, and far more nutritious — an ideal choice for families seeking true country chicken.",
       whyDifferent: [
@@ -446,16 +440,6 @@ const farmData: any = {
             </div>
           )
         },
-
-
-        //   import CountryHenFarming from '../../assets/images/country-hen-farming.jpg';
-        // import naturalFeed from '../../assets/images/natural-feed.jpg';
-        // import AntibioticHormone from '../../assets/images/antibiotic-harmone.jpg';
-        // import stressFreeEnvironment from '../../assets/images/environment.jpg';
-        // import cleanWaterImmunity from '../../assets/images/clean-water-immunity.jpg';
-        // import EthicalSustainability from '../../assets/images/ethical-sustainbility.jpg';
-        // import WhyHarithaChicken from '../../assets/images/why-haritha.jpg';
-        // import VisualDiary from '../../assets/images/visiual-diary.jpg';
         {
           title: "Antibiotic & Hormone-Free",
           icon: Stethoscope,
@@ -624,6 +608,10 @@ const farmData: any = {
     ],
     ctaText: "Enquire Now"
   },
+
+  // ─────────────────────────────────────────────
+  // FISH  (FIX: Natural Pond Ecosystem content restored from "test" string)
+  // ─────────────────────────────────────────────
   fish: {
     title: "Fish Farming",
     heroImage: FishFarmingMain,
@@ -679,45 +667,55 @@ const farmData: any = {
           title: "Natural Pond Ecosystem",
           icon: Droplets,
           image: NewNaturalEcoSystem,
-            content: "test",
+          // FIX: was content: () => "test" — replaced with proper JSX
+          content: () => (
+            <div className="space-y-4">
+              <p>Our Murrel fish are raised in natural pond ecosystems that closely mirror their wild river habitat, supporting healthy and stress-free growth.</p>
+              <div className="bg-[#FDFCF8] border border-[#C5A059]/20 p-4 rounded-sm">
+                <strong className="block text-[#0A1610] font-serif mb-2 text-sm">What we maintain:</strong>
+                <ul className="space-y-2">
+                  {[
+                    "Balanced aquatic vegetation for natural shelter",
+                    "Optimal oxygen levels at all times",
+                    "Clean, chemical-free pond water",
+                    "Natural light and seasonal cycles respected"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C5A059] flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p className="text-sm italic text-[#C5A059] border-l-2 border-[#C5A059] pl-3 py-1">A thriving natural ecosystem means healthier fish — and better-tasting, cleaner meat for your family.</p>
+            </div>
+          )
         },
-       {
-  title: "Chemical & Antibiotic-Free",
-  icon: Stethoscope,
-  image: FishFarmingPesticides,
-  content: () => (
-    <div className="space-y-4">
-      <p>We follow zero-antibiotic and zero-hormone practices.</p>
-
-      <ul className="space-y-2">
-        <li className="flex items-center gap-3">
-          <CheckCircle2 size={14} className="text-[#C5A059]" />
-          <span className="text-sm text-muted-foreground">
-            No growth enhancers
-          </span>
-        </li>
-
-        <li className="flex items-center gap-3">
-          <CheckCircle2 size={14} className="text-[#C5A059]" />
-          <span className="text-sm text-muted-foreground">
-            No harmful chemicals
-          </span>
-        </li>
-
-        <li className="flex items-center gap-3">
-          <CheckCircle2 size={14} className="text-[#C5A059]" />
-          <span className="text-sm text-muted-foreground">
-            No artificial color or feed boosters
-          </span>
-        </li>
-      </ul>
-
-      <p className="text-sm font-medium text-[#0A1610]">
-        Healthy fish grow at their own pace, producing safe, residue-free meat.
-      </p>
-    </div>
-  )
-},
+        {
+          title: "Chemical & Antibiotic-Free",
+          icon: Stethoscope,
+          image: FishFarmingPesticides,
+          content: () => (
+            <div className="space-y-4">
+              <p>We follow zero-antibiotic and zero-hormone practices.</p>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 size={14} className="text-[#C5A059]" />
+                  <span className="text-sm text-muted-foreground">No growth enhancers</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 size={14} className="text-[#C5A059]" />
+                  <span className="text-sm text-muted-foreground">No harmful chemicals</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 size={14} className="text-[#C5A059]" />
+                  <span className="text-sm text-muted-foreground">No artificial color or feed boosters</span>
+                </li>
+              </ul>
+              <p className="text-sm font-medium text-[#0A1610]">Healthy fish grow at their own pace, producing safe, residue-free meat.</p>
+            </div>
+          )
+        },
         {
           title: "Natural & Protein-Rich Feed",
           icon: Wheat,
@@ -1019,13 +1017,13 @@ export default function FarmDetail() {
                   {type === 'sheep' ? (
                     <Sheep />
                   ) : (
-                        <div className="relative w-[500px] h-[500px] flex items-center justify-center">
-            <img
-              src={data.anatomyImage}
-              alt={data.title}
-              className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-700"
-            />
-          </div>
+                    <div className="relative w-[500px] h-[500px] flex items-center justify-center">
+                      <img
+                        src={data.anatomyImage}
+                        alt={data.title}
+                        className="w-full h-full object-contain transform hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
                   )}
                 </motion.div>
 
@@ -1069,7 +1067,7 @@ export default function FarmDetail() {
               </div>
             </FadeIn>
 
-            {/* --- DETAILED PRACTICES SECTION (Added) --- */}
+            {/* --- DETAILED PRACTICES SECTION --- */}
             {data.practices && (
               <FadeIn>
                 <div className="w-full relative">
@@ -1122,7 +1120,6 @@ export default function FarmDetail() {
                   {/* Stacking Sticky Cards Layout */}
                   <div className="relative">
                     {data.practices.items.map((item: any, i: number) => {
-                      // Fallback images mapped to index
                       const images = [
                         practiceImage1,
                         practiceImage2,
@@ -1138,7 +1135,7 @@ export default function FarmDetail() {
                           key={i}
                           className="relative md:sticky md:top-0 min-h-screen md:h-screen flex flex-col md:flex-row bg-[#FDFCF8] md:overflow-hidden border-t border-[#0A1610]/5"
                         >
-                          {/* Text Side - Alternating Order */}
+                          {/* Text Side */}
                           <div className={`flex-1 flex flex-col justify-center p-8 md:p-24 relative z-10 ${i % 2 === 1 ? 'md:order-2' : ''}`}>
                             <motion.div
                               initial={{ opacity: 0, y: 40 }}
@@ -1147,7 +1144,6 @@ export default function FarmDetail() {
                               transition={{ duration: 0.8, delay: 0.2 }}
                             >
                               <div className="flex items-center gap-6 mb-8">
-
                                 <div className="p-4 rounded-full bg-[#C5A059]/10 text-[#C5A059]">
                                   <item.icon size={28} strokeWidth={1.5} />
                                 </div>
@@ -1156,12 +1152,12 @@ export default function FarmDetail() {
                               <h3 className="text-4xl md:text-5xl font-serif text-[#0A1610] mb-8 leading-tight">{item.title}</h3>
 
                               <div className="text-muted-foreground font-light leading-loose text-lg">
-                                {item.content}
+                                {item.content()}
                               </div>
                             </motion.div>
                           </div>
 
-                          {/* Image Side - Alternating Order */}
+                          {/* Image Side */}
                           <div className={`flex-1 h-[50vh] md:h-auto relative overflow-hidden ${i % 2 === 1 ? 'md:order-1' : ''}`}>
                             <motion.div
                               className="w-full h-full relative"
@@ -1351,9 +1347,9 @@ export default function FarmDetail() {
                   </div>
 
                   <h3 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">
-  <span className="text-white">{data.culinary.titleStart}</span>{" "}
-  <span className="italic text-[#C5A059]">{data.culinary.titleHighlight}</span>
-</h3>
+                    <span className="text-white">{data.culinary.titleStart}</span>{" "}
+                    <span className="italic text-[#C5A059]">{data.culinary.titleHighlight}</span>
+                  </h3>
                   <p className="text-[#F2F0E9]/70 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
                     {data.culinary.description}
                   </p>
@@ -1373,16 +1369,13 @@ export default function FarmDetail() {
       <section className="py-24 bg-[#0A1610] text-[#F2F0E9] px-6 border-t border-white/10">
         <div className="container mx-auto max-w-7xl">
           <div className="flex items-center justify-between mb-16">
-            <h3 className="text-3xl md:text-4xl font-serif text-white">
-  Visual Diary
-</h3>
+            <h3 className="text-3xl md:text-4xl font-serif text-white">Visual Diary</h3>
             <Link to="/gallery" className="hidden md:flex items-center text-xs font-bold tracking-[0.2em] uppercase text-[#C5A059] hover:text-white transition-colors">
               View Full Gallery <ArrowRight size={14} className="ml-2" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:h-[600px]">
-
             {/* Large Item */}
             <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden">
               <img src={sheepFarming1} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
@@ -1399,7 +1392,6 @@ export default function FarmDetail() {
             <div className="md:col-span-2 relative group overflow-hidden">
               <img src={FishFarmingMain} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
             </div>
-
           </div>
 
           <div className="mt-12 text-center md:hidden">
