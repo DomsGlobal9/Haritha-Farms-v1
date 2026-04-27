@@ -452,8 +452,8 @@ export function Footer() {
             <div className="flex flex-col gap-5">
               <div className="flex flex-col gap-1.5">
                 <span className="text-[11px] uppercase tracking-[1.5px] text-[#C9A84C]/40" style={{ fontFamily: "'Inter', sans-serif" }}>Phone</span>
-                <a href="tel:+919632791544" className="text-[14px] text-white/60 hover:text-[#C9A84C] transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>
-                  +91 9632791544
+                <a href="tel:+917997711600" className="text-[14px] text-white/60 hover:text-[#C9A84C] transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>
+                  +91 7997711600
                 </a>
               </div>
               <div className="flex flex-col gap-1.5">
