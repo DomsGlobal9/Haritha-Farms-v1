@@ -463,7 +463,7 @@ export function Footer() {
     className="flex items-center gap-4 sm:gap-6"
   >
     {/* FSSAI Logo */}
-    <Link to="/certificates/fssai" className="group">
+    <Link to="" className="group">
       <motion.div
         whileHover={{ y: -4, scale: 1.02 }}
         className="relative p-3 rounded-xl border border-white/5 bg-white/[0.03] backdrop-blur-sm transition-all duration-500 group-hover:border-[#C9A84C]/30 group-hover:bg-white/[0.05]"
@@ -477,7 +477,7 @@ export function Footer() {
     </Link>
 
     {/* Halal Logo */}
-    <Link to="/certificates/halal" className="group">
+    <Link to="" className="group">
       <motion.div
         whileHover={{ y: -4, scale: 1.02 }}
         className="relative p-3 rounded-xl border border-white/5 bg-white/[0.03] backdrop-blur-sm transition-all duration-500 group-hover:border-[#C9A84C]/30 group-hover:bg-white/[0.05]"
