@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import LivePricesFAB from './components/LivePricesFAB';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -22,6 +23,7 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <LivePricesFAB />
     </div>
   );
 }
