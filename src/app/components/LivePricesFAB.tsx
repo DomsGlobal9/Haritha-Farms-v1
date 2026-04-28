@@ -70,7 +70,7 @@ interface LivePricesFABProps {
   position?: "bottom-right" | "bottom-left";
   /**
    * Phone number for the call button.
-   * @default "+919876543210"
+   * @default "+917997711600"
    */
   phoneNumber?: string;
 }
@@ -79,7 +79,7 @@ export default function LivePricesFAB({
   prices = SAMPLE_PRICES,
   title = "Live Farm Prices",
   position = "bottom-right",
-  phoneNumber = "+919876543210",
+  phoneNumber = "+917997711600",
 }: LivePricesFABProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isPulsing, setIsPulsing] = useState(true);
