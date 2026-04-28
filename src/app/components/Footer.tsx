@@ -8,6 +8,9 @@ import sheepSvgPaths from '../../imports/svg-phe9usc7h3';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 
+import fssaiLogo from '../../assets/images/fssai-logo.png';
+import halalLogo from '../../assets/images/halal-logo.png';
+
 /* ── Animation variants ──────────────────────────────────────────────────── */
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -366,7 +369,7 @@ export function Footer() {
         />
 
         {/* ── 4-Column Grid ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
 
           {/* Column 1: Company Info */}
           <motion.div
@@ -437,6 +440,57 @@ export function Footer() {
               <FooterLink to="/Transparency">Transparency</FooterLink>
             </ul>
           </motion.div>
+
+
+          {/* NEW Column 4: Certificates */}
+ {/* Column 4: Certificates */}
+<motion.div
+  variants={staggerContainer}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <motion.h4
+    className="text-[18px] text-white/80 mb-6"
+    style={{ fontFamily: "'Playfair Display', serif" }}
+    variants={staggerItem}
+  >
+    Certificates
+  </motion.h4>
+  
+  <motion.div 
+    variants={staggerItem}
+    className="flex items-center gap-4 sm:gap-6"
+  >
+    {/* FSSAI Logo */}
+    <Link to="/certificates/fssai" className="group">
+      <motion.div
+        whileHover={{ y: -4, scale: 1.02 }}
+        className="relative p-3 rounded-xl border border-white/5 bg-white/[0.03] backdrop-blur-sm transition-all duration-500 group-hover:border-[#C9A84C]/30 group-hover:bg-white/[0.05]"
+      >
+        <img 
+          src={fssaiLogo} 
+          alt="FSSAI Certified" 
+          className="h-10 w-auto object-contain" 
+        />
+      </motion.div>
+    </Link>
+
+    {/* Halal Logo */}
+    <Link to="/certificates/halal" className="group">
+      <motion.div
+        whileHover={{ y: -4, scale: 1.02 }}
+        className="relative p-3 rounded-xl border border-white/5 bg-white/[0.03] backdrop-blur-sm transition-all duration-500 group-hover:border-[#C9A84C]/30 group-hover:bg-white/[0.05]"
+      >
+        <img 
+          src={halalLogo} 
+          alt="Halal Compliance" 
+          className="h-10 w-auto object-contain" 
+        />
+      </motion.div>
+    </Link>
+  </motion.div>
+</motion.div>
 
           {/* Column 4: Contact Us */}
           <motion.div
