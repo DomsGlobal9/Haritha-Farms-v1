@@ -13,12 +13,9 @@ interface PriceItem {
 // ─── Sample data – replace with your real API / props ────────────────────────
 
 const SAMPLE_PRICES: PriceItem[] = [
-  { label: "Tomatoes",    price: "₹45",  unit: "kg", change: "up",    changePercent: "+8%" },
-  { label: "Onions",      price: "₹32",  unit: "kg", change: "down",  changePercent: "-5%" },
-  { label: "Potatoes",    price: "₹28",  unit: "kg", change: "stable",changePercent: "0%"  },
-  { label: "Brinjal",     price: "₹38",  unit: "kg", change: "up",    changePercent: "+12%"},
-  { label: "Green Chili", price: "₹85",  unit: "kg", change: "down",  changePercent: "-3%" },
-  { label: "Coriander",   price: "₹120", unit: "kg", change: "up",    changePercent: "+15%"},
+  { label: "Sheep Live",        price: "₹450",  unit: "piece", change: "stable", changePercent: "0%" },
+  { label: "Live Murrel Fish",  price: "₹350",  unit: "kg",    change: "stable", changePercent: "0%" },
+  { label: "Natu Kodi",         price: "₹550",  unit: "kg",    change: "stable", changePercent: "0%" },
 ];
 
 // ─── Sub-components ──────────────────────────────────────────────────────────
@@ -48,6 +45,12 @@ const ChartIcon = () => (
   </svg>
 );
 
+const PhoneIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M13.5 11.5l-2-2c-.5-.5-1.5-.5-2 0l-.5.5c-.5.5-1.5.5-2 0L3.5 6c-.5-.5-.5-1.5 0-2l.5-.5c.5-.5.5-1.5 0-2l-2-2c-.5-.5-1.5-.5-2 0L1 1c0 .5.5 2.5 4 6s5.5 4 6 4l.5-.5c.5-.5 1.5-.5 2 0z" stroke="currentColor" strokeWidth="1.2" fill="none"/>
+  </svg>
+);
+
 // ─── Main FAB Component ───────────────────────────────────────────────────────
 
 interface LivePricesFABProps {
@@ -65,12 +68,18 @@ interface LivePricesFABProps {
    * @default "bottom-right"
    */
   position?: "bottom-right" | "bottom-left";
+  /**
+   * Phone number for the call button.
+   * @default "+919876543210"
+   */
+  phoneNumber?: string;
 }
 
 export default function LivePricesFAB({
   prices = SAMPLE_PRICES,
   title = "Live Farm Prices",
   position = "bottom-right",
+  phoneNumber = "+919876543210",
 }: LivePricesFABProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isPulsing, setIsPulsing] = useState(true);
@@ -167,12 +176,19 @@ export default function LivePricesFAB({
 
           {/* Footer */}
           <div
-            className="px-4 py-2 text-center"
+            className="px-4 py-3 flex flex-col gap-2"
             style={{ borderTop: "1px solid rgba(134,197,87,0.15)" }}
           >
-            <span className="text-xs text-gray-500">
+            <span className="text-xs text-gray-500 text-center">
               Updated: {new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" })}
             </span>
+            <a
+              href={`tel:${phoneNumber}`}
+              className="flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium transition-colors"
+            >
+              <PhoneIcon />
+              Call Now
+            </a>
           </div>
         </div>
 
