@@ -167,7 +167,7 @@ export default function LivePricesFAB({
                   >
                     {item.change === "up" && <ArrowUpIcon />}
                     {item.change === "down" && <ArrowDownIcon />}
-                    {item.changePercent}
+                    {item.change !== "stable" && item.changePercent}
                   </span>
                 </div>
               </div>
