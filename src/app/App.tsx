@@ -4,7 +4,8 @@ import React from 'react';
 import { IS_SITEMAP_XML_REQUEST } from './sitemap-xml-handler';
 // Must be the second import — intercepts /robots.txt before React mounts
 import { IS_ROBOTS_TXT_REQUEST } from './robots-txt-handler';
-import { BrowserRouter, Routes, Route } from 'react-router';
+// import { BrowserRouter, Routes, Route } from 'react-router';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -81,6 +82,7 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="farms" element={<Farms />} />
           <Route path="farms/:type" element={<FarmDetail />} />
+          
           <Route path="contact" element={<Contact />} />
           
           <Route path="practices" element={<Practices />} />
