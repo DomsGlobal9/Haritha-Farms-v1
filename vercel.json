@@ -23,6 +23,9 @@
       "dest": "backend/server.js"
     },
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/robots.txt",
       "headers": {
         "Content-Type": "text/plain; charset=utf-8"
