@@ -289,6 +289,172 @@ function FooterLink({ to, children }: { to: string; children: React.ReactNode })
 
 /* ══════════════════════════════════════════════════════════════════════════ */
 export function Footer() {
+  React.useEffect(() => {
+    const canvas = document.getElementById('footer-logo-canvas') as HTMLCanvasElement | null;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationFrameId: number;
+    let mouse = { x: -1000, y: -1000, active: false };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = ((e.clientX - rect.left) / rect.width) * canvas.width;
+      mouse.y = ((e.clientY - rect.top) / rect.height) * canvas.height;
+      mouse.active = true;
+    };
+
+    const handleMouseLeave = () => {
+      mouse.x = -1000;
+      mouse.y = -1000;
+      mouse.active = false;
+    };
+
+    canvas.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('mouseleave', handleMouseLeave);
+
+    const width = 220;
+    const height = 124;
+
+    const offscreen = document.createElement('canvas');
+    offscreen.width = width;
+    offscreen.height = height;
+    const oCtx = offscreen.getContext('2d');
+    if (!oCtx) return;
+
+    oCtx.fillStyle = '#ffffff';
+    oCtx.textAlign = 'center';
+    oCtx.textBaseline = 'middle';
+
+    // Draw DOMS
+    oCtx.font = '700 italic 28px "Playfair Display", Georgia, serif';
+    oCtx.fillText('DOMS', width / 2, 45);
+
+    // Draw separator line
+    oCtx.fillRect(width / 2 - 35, 62, 70, 1.5);
+
+    // Draw GLOBAL
+    oCtx.font = '500 11px "Inter", sans-serif';
+    oCtx.fillText('GLOBAL', width / 2, 80);
+
+    const imgData = oCtx.getImageData(0, 0, width, height);
+    const data = imgData.data;
+
+    interface Particle {
+      x: number;
+      y: number;
+      tx: number;
+      ty: number;
+      vx: number;
+      vy: number;
+      radius: number;
+      color: string;
+    }
+
+    const particles: Particle[] = [];
+    const step = 3;
+
+    for (let y = 0; y < height; y += step) {
+      for (let x = 0; x < width; x += step) {
+        const index = (y * width + x) * 4;
+        const alpha = data[index + 3];
+        if (alpha > 128) {
+          let color = '#ffffff';
+          if (y < 58) {
+            color = '#ff5c00'; // Orange for DOMS
+          } else if (y >= 58 && y <= 65) {
+            color = '#C9A84C'; // Gold for line
+          } else {
+            color = '#ffffff'; // White for GLOBAL
+          }
+
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            tx: x,
+            ty: y,
+            vx: 0,
+            vy: 0,
+            radius: Math.random() * 0.8 + 0.6,
+            color
+          });
+        }
+      }
+    }
+
+    const springStrength = 0.04;
+    const friction = 0.88;
+    const repulsionRadius = 35;
+    const repulsionForce = 0.8;
+
+    const animate = () => {
+      ctx.clearRect(0, 0, width, height);
+
+      // Update & Draw Particles
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+
+        // Spring to target
+        const dx = p.tx - p.x;
+        const dy = p.ty - p.y;
+        p.vx += dx * springStrength;
+        p.vy += dy * springStrength;
+
+        // Mouse repulsion
+        if (mouse.active) {
+          const mdx = p.x - mouse.x;
+          const mdy = p.y - mouse.y;
+          const dist = Math.hypot(mdx, mdy);
+          if (dist < repulsionRadius) {
+            const force = (repulsionRadius - dist) / repulsionRadius;
+            p.vx += (mdx / dist) * force * repulsionForce;
+            p.vy += (mdy / dist) * force * repulsionForce;
+          }
+        }
+
+        // Friction & Position
+        p.vx *= friction;
+        p.vy *= friction;
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Draw
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Draw constellations / connections
+      ctx.strokeStyle = 'rgba(201, 168, 76, 0.08)';
+      ctx.lineWidth = 0.4;
+      for (let i = 0; i < particles.length; i++) {
+        const p1 = particles[i];
+        for (let j = i + 1; j < particles.length; j++) {
+          const p2 = particles[j];
+          const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
+          if (dist < 10) {
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      canvas.removeEventListener('mousemove', handleMouseMove);
+      canvas.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
   return (
     <motion.footer
       className="relative overflow-hidden bg-[#0A1610]"
@@ -442,8 +608,7 @@ export function Footer() {
           </motion.div>
 
 
-          {/* NEW Column 4: Certificates */}
- {/* Column 4: Certificates */}
+          {/* Column 4: Certificates */}
 <motion.div
   variants={staggerContainer}
   initial="hidden"
@@ -492,7 +657,7 @@ export function Footer() {
   </motion.div>
 </motion.div>
 
-          {/* Column 4: Contact Us */}
+          {/* Column 5: Contact Us */}
           <motion.div
             variants={fadeUp}
             custom={3}
@@ -613,6 +778,15 @@ export function Footer() {
           </p>
           <DomsAttribution />
         </motion.div>
+
+        {/* ── DOMS Global Footer Animation ── */}
+        <div className="footer-v2-doms">
+          Made by
+          <a href="https://www.domsglobal.co/" target="_blank" rel="noopener noreferrer" className="footer-doms-link">
+            <canvas id="footer-logo-canvas" className="footer-doms-canvas" width="220" height="124"
+              aria-label="Doms Global"></canvas>
+          </a>
+        </div>
       </div>
     </motion.footer>
   );

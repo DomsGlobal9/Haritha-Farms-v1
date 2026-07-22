@@ -199,4 +199,35 @@
   .prose blockquote {
     @apply border-l-4 border-secondary pl-6 italic text-muted-foreground;
   }
+
+  /* DOMS Global Footer styles */
+  .footer-v2-doms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 32px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.25);
+  }
+
+  .footer-doms-link {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer-doms-link:hover {
+    opacity: 0.8;
+  }
+
+  .footer-doms-canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
 }
